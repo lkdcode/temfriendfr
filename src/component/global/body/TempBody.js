@@ -1,11 +1,17 @@
 import react from "react";
-import TempAlbumContent from "../../container/album/TempAlbumContent";
+import TempAlbumContainer from "../../container/album/TempAlbumContainer";
+
+import '../../../scss/global/body/TempBody.scss';
 
 const Body = () => {
+  
+  const loopSize = 5;
 
   return (
     <>
-      <TempAlbumContent />
+      <div className="body-box">
+        <TempAlbumContainer loopSize= { loopSize }/>
+      </div>
     </>
   )
 

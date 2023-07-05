@@ -1,0 +1,38 @@
+@import '../../Global.scss';
+
+
+.footer-container {
+  border-top: 1px solid #000;
+  padding-top: 15px;
+  
+  @include GlobalCenter;
+
+  margin-top: 100px;
+
+
+  .footer-box {
+    @include GlobalCenter;
+
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+
+    .footer-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .footer-content {
+      margin: 5px;
+    }
+
+    .footer-easteregg {
+      margin: 5px;
+    }
+
+    .footer-copy {
+      margin: 5px;
+    }
+
+  }
+}
