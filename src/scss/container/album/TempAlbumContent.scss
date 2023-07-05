@@ -5,6 +5,7 @@
   @include GlobalCenter;
 
   border: 1px solid #000;
+  
   width: 300px;
   height: 400px;
 
@@ -13,14 +14,25 @@
   border-radius: 20px;
   font-size: 14px;
 
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px 1px rgba(15, 15, 30, 0.8);
+
+  &:hover{
+    box-shadow: 2px 2px 4px 2px rgba(50, 50, 80, 0.8);
+    transform: scale(1.05);
+  }
+
   .album-picture {
     @include GlobalCenter;
    
-    border: 1px solid red;
     width: 250px;
     height: 200px;
     margin-top: 15px;
     border-radius: 20px;
+
+    background-size: cover;
+    background-position: center center;
   }
 
   .album-title {
@@ -35,7 +47,7 @@
 
   .album-content {
     @include GlobalCenter;
-  
+    
     border: 1px solid #000;
 
     width: 250px;
@@ -57,13 +69,19 @@
     height: 50px;
 
     .album-like {
+      cursor: pointer;
       height: 100%;
       @include GlobalCenter;
+
+      font-size: 20px;
     }
   
     .album-replycount {
       height: 100%;
       @include GlobalCenter;
+      
+      font-size: 20px;
+      padding-right: 100px;
     }
   
     .album-date {
