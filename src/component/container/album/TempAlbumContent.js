@@ -14,9 +14,18 @@ const TempAlbumContent = () => {
     setIsSolid(!isSolid);
   };
 
+
+
+  const detail = () => {
+    // TODO : 클릭했을 때 해당 값을 가지고서 디테일 뷰를 보여줘야 함.
+    alert('test');
+
+    
+  }
+
   return (
     <>
-      <div className="album-container">
+      <div className="album-container" onClick={ detail }>
         
         <img className="album-picture" src='img/testImg.jpg' alt="album" />
 
