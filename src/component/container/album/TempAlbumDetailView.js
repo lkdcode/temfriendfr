@@ -1,40 +1,38 @@
 import react from "react";
 import TempAlbumReply from './TempAlbumReply.js';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as solidHeart, faComment, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
+
 import '../../../scss/container/album/TempAlbumDetailView.scss';
 
 const TempAlbumDetailView = ( { detailDTO } ) => {
 
   // TODO : 사진 및 내용들을 태그에 추가해야 함
 
-
   return (
     <>
 
       <div className="album-detail-box"> 
         
-          <div className="album-photos-box">
 
-            <li>
-              사진1
-            </li>
-          
+        <div className="album-photos-box">
+    
+          <div className="photo-box">          
+            <div className="photo"></div>
           </div>
-          
+
+        </div>
+
           <div className="album-main-content">
 
-
             <div className="writer-box">
-              
-              
               
               <div className="profile-box">
                 <div className="profile"></div> 
               </div>
               
-              
-
-
               <div className="album-detail">
 
                 <div className="upper-box">
@@ -48,8 +46,6 @@ const TempAlbumDetailView = ( { detailDTO } ) => {
 
                 </div>
 
-
-
                 <div className="lower-box">
 
                   <div className="album-dt">23.11.11 ~ 23.11.12</div>
@@ -57,18 +53,16 @@ const TempAlbumDetailView = ( { detailDTO } ) => {
                 </div>
 
               </div>
-              
-
-
 
               <div className="btn-box">
+                <button className="close-btn">
+                  <FontAwesomeIcon icon={ faCircleXmark } />
+                </button>
                 <button className="modify-btn">수정</button>
                 <button className="delete-btn">삭제</button>
               </div>
 
-
             </div>
-
 
             <div className="content-box">
               <div className="content">
@@ -84,18 +78,14 @@ const TempAlbumDetailView = ( { detailDTO } ) => {
               <div className="line"></div>
             </div>
 
-
             <div className="input-reply-box">
               
                 <div className="user-profile"></div>
                 <textarea className="input-reply" placeholder="댓글을 작성해주세요."></textarea>
-              
-
-              
+             
                 <button className="create-reply">댓글 쓰기</button>
 
             </div>
-
 
             <div className="reply-box">
                 <TempAlbumReply />
@@ -122,7 +112,6 @@ const TempAlbumDetailView = ( { detailDTO } ) => {
                 <TempAlbumReply />
             </div>
 
-            
           </div>
 
         </div>
