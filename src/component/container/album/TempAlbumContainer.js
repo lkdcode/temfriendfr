@@ -5,24 +5,33 @@ import TempAlbumDetailView from "./TempAlbumDetailView";
 
 import '../../../scss/container/album/TempAlbumContainer.scss';
 
-const TempAlbumContainer = ( { loopSize } ) => {
+const TempAlbumContainer = () => {
 
-  const testSize = 15;
+  const testSize = 50;
+
+  const [showDetailView, setShowDetailView] = useState(false);
+
+  const clickHandler = () => {
+    if (showDetailView === true) {
+      setShowDetailView(false);
+      return;
+    }
+    setShowDetailView(!showDetailView);
+  }
 
   return (
     <>
 
-      <TempAlbumDetailView />
+      {showDetailView && <TempAlbumDetailView />}
       
+      {/* {!showDetailView &&   */}
+        <div className="album-body-container">
+          {Array.from(Array(testSize), (_, index) => (
+            <TempAlbumContent key={index} onClick={clickHandler} />
+          ))}
 
-      {/* <div className="album-body-container">
-
-        {Array.from(Array(testSize), (_, index) => (
-          <TempAlbumContent key={index} />
-        ))}
-
-      </div> */}
-
+        </div>
+      {/* | */}
     </>
   )
 }
