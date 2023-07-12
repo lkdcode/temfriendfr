@@ -7,7 +7,7 @@ import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 
 import '../../../scss/container/album/TempAlbumDetailView.scss';
 
-const TempAlbumDetailView = ( { detailDTO } ) => {
+const TempAlbumDetailView = ( { onClick, content } ) => {
 
   // TODO : 사진 및 내용들을 태그에 추가해야 함
 
@@ -16,7 +16,6 @@ const TempAlbumDetailView = ( { detailDTO } ) => {
 
       <div className="album-detail-box"> 
         
-
         <div className="album-photos-box">
     
           <div className="photo-box">          
@@ -55,7 +54,7 @@ const TempAlbumDetailView = ( { detailDTO } ) => {
               </div>
 
               <div className="btn-box">
-                <button className="close-btn">
+                <button className="close-btn" onClick={ onClick }>
                   <FontAwesomeIcon icon={ faCircleXmark } />
                 </button>
                 <button className="modify-btn">수정</button>
@@ -66,6 +65,9 @@ const TempAlbumDetailView = ( { detailDTO } ) => {
 
             <div className="content-box">
               <div className="content">
+              <br/>
+              <br/>
+              <br/>
               국가안전보장에 관련되는 대외정책·군사정책과 국내정책의 수립에 관하여 국무회의의 심의에 앞서 대통령의 자문에 응하기 위하여 국가안전보장회의를 둔다.<br />
               모든 국민은 직업선택의 자유를 가진다.<br />
               비상계엄이 선포된 때에는 법률이 정하는 바에 의하여 영장제도, 언론·출판·집회·결사의 자유, 정부나 법원의 권한에 관하여 특별한 조치를 할 수 있다.<br />
