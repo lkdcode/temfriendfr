@@ -10,28 +10,30 @@ const TempAlbumContainer = () => {
   const testSize = 50;
 
   const [showDetailView, setShowDetailView] = useState(false);
+  const [content, setContent] = useState({});
+
 
   const clickHandler = () => {
+
     if (showDetailView === true) {
       setShowDetailView(false);
       return;
     }
+
     setShowDetailView(!showDetailView);
   }
 
   return (
     <>
 
-      {showDetailView && <TempAlbumDetailView />}
+      {showDetailView && <TempAlbumDetailView onClick={ clickHandler } content={ content }/>}
       
-      {/* {!showDetailView &&   */}
         <div className="album-body-container">
           {Array.from(Array(testSize), (_, index) => (
-            <TempAlbumContent key={index} onClick={clickHandler} />
+            <TempAlbumContent index={index} key={index} onClick={ clickHandler } setContent={ setContent }/>
           ))}
-
         </div>
-      {/* | */}
+
     </>
   )
 }

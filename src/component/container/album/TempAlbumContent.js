@@ -7,37 +7,39 @@ import TempAlbumDetailView from "./TempAlbumDetailView";
 
 import '../../../scss/container/album/TempAlbumContent.scss';
 
-const TempAlbumContent = ( { onClick } ) => {
+const TempAlbumContent = ( { index, onClick, setContent } ) => {
 
   const [isSolid, setIsSolid] = useState(false);
-  const [showDetailView, setShowDetailView] = useState(false);
-
+  
   const toggleHeartIcon = () => {
     // TODO : 유저가 좋아요를 눌렀는지 확인해서 반영해야함
     setIsSolid(!isSolid);
   };
 
+  let imgurl = '';
 
-  const detail = () => {
-    // TODO : 클릭했을 때 해당 값을 가지고서 디테일 뷰를 보여줘야 함.
-    // alert('test');
-    setShowDetailView(!showDetailView);
+  if(index % 3 === 0) {
+    imgurl = 'img/img2.jpg';
+  } else if (index % 2 === 0 ){
+    imgurl = 'img/img3.jpg';
+  } else {
+    imgurl = 'img/img4.jpg';
   }
   
-
   return ( 
     <>
-      
+    <TempAlbumDetailView />
+
       <div className="album-container" onClick={ onClick }>
         
-        <img className="album-picture" src='img/testImg.jpg' alt="album" />
+        <img className="album-picture" src={ imgurl } alt="album" />
 
         <div className="album-title">
-          title
+          album-title
         </div>
 
         <div className="album-content">
-          content
+          album-content {index}
         </div>
 
         <div className="album-sub-box">
