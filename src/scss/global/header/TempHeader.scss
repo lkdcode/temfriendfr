@@ -1,31 +1,23 @@
+@import "../../Global.scss";
+
 .header-container {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
+  @include GlobalCenter;
 
   border-bottom: 1px solid #000;
-
   margin-bottom: 30px;
 
   .header-box {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
+    @include GlobalCenter;
 
     width: 960px;
     height: 120px;
 
     .header-title {
+      @include GlobalCenter;
+
       width: 100vw;
       height: 70px;
       font-weight: bold;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
 
       border-bottom: 1px solid #000;
 
@@ -35,15 +27,15 @@
     }
 
     .header-nav-box {
-      font-size: 14px;
-
-      width: 100%;
-      height: 50px;
-
       display: flex;
       justify-content: space-around;
       justify-self: center;
       align-items: center;
+
+      font-size: 14px;
+
+      width: 100%;
+      height: 50px;
 
       transition: transform 1s ease;
 

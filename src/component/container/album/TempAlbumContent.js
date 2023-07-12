@@ -8,7 +8,7 @@ import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 
 import "../../../scss/container/album/TempAlbumContent.scss";
 
-const TempAlbumContent = ({ index, onClick, setContent }) => {
+const TempAlbumContent = ({ index, onClick }) => {
   const [isSolid, setIsSolid] = useState(false);
 
   const toggleHeartIcon = () => {
@@ -31,9 +31,9 @@ const TempAlbumContent = ({ index, onClick, setContent }) => {
       <div className="album-container" onClick={onClick}>
         <img className="album-picture" src={imgurl} alt="album" />
 
-        <div className="album-title">album-title</div>
+        <div className="album-title">album-title {index}</div>
 
-        <div className="album-content">album-content {index}</div>
+        <div className="album-content">album-content</div>
 
         <div className="album-sub-box">
           <div

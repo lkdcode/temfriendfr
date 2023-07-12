@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import TempHeader from "../src/component/global/header/TempHeader";
 import TempFooter from "../src/component/global/footer/TempFooter";
 import TempMain from "../src/component/main/TempMain";
-import TempAlbumContainer from "./component/container/album/TempAlbumContainer";
 import TempAlbumDetailView from "./component/container/album/TempAlbumDetailView";
 
 //TODO 나중에 div 로 감싼다
@@ -14,6 +12,7 @@ import TempAlbumDetailView from "./component/container/album/TempAlbumDetailView
 // TODO : path도 상수화 (휴먼에러)
 // TODO : 상대경로말고 절대경로 ㅋㅋㅋㅋ
 // 프리티어 컨벤션 plugin
+
 function App() {
   return (
     <>
@@ -29,7 +28,7 @@ function App() {
           }
         />
         <Route
-          path="/albums"
+          path="/albums/detail/:index"
           element={
             <div>
               <TempHeader />
