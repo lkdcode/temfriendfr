@@ -2,19 +2,20 @@ import react from "react";
 import TempAlbumReply from "./TempAlbumReply.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate, Routes, Route } from "react-router-dom";
+import { useNavigate, Routes, Route, useParams } from "react-router-dom";
 import {
   faHeart as solidHeart,
   faComment,
   faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 
 import "../../../scss/container/album/TempAlbumDetailView.scss";
 import "../../../scss/global/body/TempBody.scss";
 
-const TempAlbumDetailView = ({ onClick, content }) => {
+const TempAlbumDetailView = () => {
   const navigate = useNavigate();
+  const { index } = useParams();
+
   // TODO : 사진 및 내용들을 태그에 추가해야 함
 
   return (
@@ -35,7 +36,7 @@ const TempAlbumDetailView = ({ onClick, content }) => {
 
               <div className="album-detail">
                 <div className="upper-box">
-                  <div className="nickname">NickName</div>
+                  <div className="nickname">NickName{index}</div>
                   <div className="create-dt">2023.07.10 12:31</div>
                   <div className="like-box">
                     <div className="like-emoji">🎈</div>
