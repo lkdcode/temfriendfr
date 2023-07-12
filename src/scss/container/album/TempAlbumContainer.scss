@@ -1,13 +1,11 @@
-@import '../../Global.scss';
+@import "../../Global.scss";
 
 .album-body-container {
-
+  @include GlobalCenter;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 
   width: 960px;
   max-width: 960px;
-
-
 }
