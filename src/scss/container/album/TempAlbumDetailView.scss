@@ -15,7 +15,9 @@
   .album-photos-box {
     @include GlobalCenter;
 
-    border: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
     width: 50%;
     height: 90%;
   }
