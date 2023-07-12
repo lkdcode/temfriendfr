@@ -1,18 +1,18 @@
 import React from "react";
-import TempHeader from '../global/header/TempHeader';
-import TempBody from '../global/body/TempBody';
-import TempFooter from '../global/footer/TempFooter';
+
+import TempAlbumContainer from "../container/album/TempAlbumContainer";
+import "../../scss/main/TempMain.scss";
+
+// 헤더랑 푸터 빼고
 
 const Main = () => {
-
   return (
     <>
-      <TempHeader />
-      <TempBody />
-      <TempFooter />
+      <div className="main-container">
+        <TempAlbumContainer />
+      </div>
     </>
-  )
-  
-}
+  );
+};
 
-export default Main
+export default Main;
