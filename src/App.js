@@ -5,6 +5,7 @@ import TempHeader from "../src/component/global/header/TempHeader";
 import TempFooter from "../src/component/global/footer/TempFooter";
 import TempMain from "../src/component/main/TempMain";
 import TempAlbumDetailView from "./component/container/album/TempAlbumDetailView";
+import TempAlbumPost from "./component/container/post/TempAlbumPost";
 
 //TODO 나중에 div 로 감싼다
 
@@ -32,9 +33,19 @@ function App() {
           element={
             <div>
               <TempHeader />
-              <div>
-                <TempAlbumDetailView />
-              </div>
+              {/* <div> */}
+              <TempAlbumDetailView />
+              {/* </div> */}
+              <TempFooter />
+            </div>
+          }
+        />
+        <Route
+          path="/albums/post"
+          element={
+            <div>
+              <TempHeader />
+              <TempAlbumPost />
               <TempFooter />
             </div>
           }

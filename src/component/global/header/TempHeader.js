@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 import "../../../scss/global/header/TempHeader.scss";
 
 const Header = () => {
+  const navigate = useNavigate();
   const goHome = () => {
-    window.location.href = "/";
+    navigate("/");
+  };
+
+  const post = () => {
+    navigate("/albums/post");
   };
 
   return (
@@ -22,7 +29,7 @@ const Header = () => {
             <div className="header-menu2" onClick={goHome}>
               달력보기
             </div>
-            <div className="header-menu3" onClick={goHome}>
+            <div className="header-menu3" onClick={post}>
               글쓰기
             </div>
             <div className="header-login" onClick={goHome}>

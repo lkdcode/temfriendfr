@@ -8,7 +8,7 @@ import "../../../scss/container/album/TempAlbumContainer.scss";
 const TempAlbumContainer = () => {
   const navigate = useNavigate();
   //TODO
-  const testSize = 18;
+  const testSize = 49;
 
   // 상태에 따라서 히든으로
   // npm install react-router-dom

@@ -1,0 +1,41 @@
+@import "../../Global.scss";
+
+.post-container {
+  @include GlobalCenter;
+
+  width: 100%;
+
+  .post-box {
+    @include GlobalCenter;
+
+    width: 960px;
+    height: 800px;
+    .input-title {
+      input {
+        width: 500px;
+        height: 32px;
+        font-size: 15px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+        background-color: rgb(233, 233, 233);
+      }
+      margin: 25px;
+    }
+
+    .btn-box {
+      margin-left: 530px;
+      button {
+        margin: 15px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.ck-editor__editable {
+  height: 400px;
+}
